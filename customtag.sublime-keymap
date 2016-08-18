@@ -13,5 +13,15 @@
 			{ "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
 			{ "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
 		]
-	}
+	},
+		{ "keys": ["alt+shift+q"], "command": "insert_snippet", "args": {"contents": "<p class=\"${1:DocText}\">$SELECTION</p>"}, "context":
+		[
+			{ "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+			{ "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true },
+			{ "key": "selector", "operator": "equal", "operand": "(text.html, text.xml)", "match_all": true },
+		]
+	},
+
+
+
 ]
